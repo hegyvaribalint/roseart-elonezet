@@ -148,13 +148,13 @@
       if (db > 200) { out.innerHTML = '<p class="hiba">200 szék felett személyes ajánlatot adunk: <a href="#ajanlat">kérj ajánlatot</a>.</p>'; return; }
       out.textContent = 'Számolás…';
       fetch(f.action, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({ zipcode: f.zipcode.value.trim(), chair_count: db }) })
+        body: JSON.stringify({ zipcode: f.zipcode.value.trim(), chair_count: db, color: f.color ? f.color.value : 'feher' }) })
         .then(function (r) { return r.json(); })
         .then(function (d) {
           if (d.error) { out.innerHTML = '<p class="hiba"></p>'; out.firstChild.textContent = d.error; return; }
           var sor = function (a, b) { return '<tr><td>' + a + '</td><td>' + b + ' Ft</td></tr>'; };
           out.innerHTML = '<p><strong></strong></p><table>' +
-            sor('Székbérlés (' + db + ' db)', d.chair_cost) + sor('Fel- és lepakolás', d.loading_cost) +
+            sor('Székbérlés (' + db + ' db, ' + (d.color === 'arany' ? 'arany' : 'fehér') + ')', d.chair_cost) + sor('Fel- és lepakolás', d.loading_cost) +
             (d.distance_cost === 'none' ? '' : sor('Kiszállítás', d.distance_cost)) +
             sor('Összesen (nettó)', d.total_cost) + '<tr class="osszes"><td>Összesen (bruttó)</td><td>' + d.total_cost_tax + ' Ft</td></tr></table>' +
             '<p class="kicsi">Tájékoztató ár. <a href="#ajanlat">Kérj pontos ajánlatot!</a></p>';

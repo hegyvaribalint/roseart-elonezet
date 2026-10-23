@@ -37,7 +37,7 @@
 <link rel="apple-touch-icon" href="/roseart-elonezet/apple-touch-icon.png">
 <link rel="preload" href="/roseart-elonezet/assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/roseart-elonezet/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/roseart-elonezet/assets/style.css?v=2b46aab4b8">
+<link rel="stylesheet" href="/roseart-elonezet/assets/style.css?v=6aa410a7a2">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -92,7 +92,7 @@
 <section class="section"><div class="wrap-szuk">
   <h1>Chiavari kalkulátor</h1>
   <p class="lead">Számold ki, mennyibe kerül a Chiavari szék bérlése kiszállítással együtt. A kalkulátor a rendezvény irányítószáma alapján Székesfehérvártól számítja a kiszállítást, és hozzáadja a székbérlés és a fel- és lepakolás díját.</p>
-  <div class="roviden" style="margin:0"><p><b>Röviden</b>A fehér Chiavari szék fehér párnával nettó 790 Ft/db bevezető áron bérelhető, a kiszállítás Székesfehérvárról az ország egész területére kérhető. A kalkulátor 10 és 200 szék között ad tájékoztató árat; 200 szék felett személyes ajánlatot adunk.</p></div>
+  <div class="roviden" style="margin:0"><p><b>Röviden</b>A fehér Chiavari szék bruttó 990 Ft/db, az arany bruttó 1650 Ft/db (fehér párnával), a kiszállítás Székesfehérvárról az ország egész területére kérhető. A kalkulátor 10 és 200 szék között ad tájékoztató árat; 200 szék felett személyes ajánlatot adunk.</p></div>
 </div></section>
 
 <section class="section puha" id="kalkulator">
@@ -103,6 +103,9 @@
       <p class="kicsi">Minimum 10, legfeljebb 200 szék rendelhető a kalkulátorral; 200 szék felett személyes ajánlatot adunk. Az eredmény tájékoztató jellegű, nem jelent kötelezettségvállalást.</p>
     </div>
     <form class="urlap kalk" action="/kalkulator.php" method="post">
+      <label>A szék színe
+        <select name="color"><option value="feher">Fehér (bruttó 990 Ft/db)</option><option value="arany">Arany (bruttó 1650 Ft/db)</option></select>
+      </label>
       <div class="urlap-ket">
         <label>A rendezvény irányítószáma <input type="text" name="zipcode" inputmode="numeric" pattern="[0-9]{4}" placeholder="pl. 8000" required></label>
         <label>Székek száma <input type="number" name="chair_count" min="10" max="200" placeholder="pl. 44" required></label>
@@ -209,6 +212,6 @@
 <button type="button" data-consent="accepted" class="btn">Elfogadom</button></div></div>
 <div class="lightbox" id="lightbox" hidden><button type="button" class="lb-zar" aria-label="Bezárás">×</button><button type="button" class="lb-elozo" aria-label="Előző kép">‹</button><figure><img alt="" width="1366" height="1024"><figcaption></figcaption></figure><button type="button" class="lb-kov" aria-label="Következő kép">›</button></div>
 
-<script src="/roseart-elonezet/assets/main.js?v=eb04a444ba" defer></script>
+<script src="/roseart-elonezet/assets/main.js?v=93ce59f14b" defer></script>
 </body>
 </html>

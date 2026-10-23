@@ -283,3 +283,5 @@ details.faq p:last-child { margin-bottom: 0; }
 .arak > div { background: #fff; border: 1px solid #f0dde6; border-radius: 14px; padding: 18px; text-align: center; }
 .arak .ar { font-family: 'Playfair Display', Georgia, serif; font-size: 1.7rem; color: var(--fo); display: block; }
 @media (max-width: 760px) { .arak { grid-template-columns: minmax(0, 1fr); } }
+.ar-kicsi { font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; color: var(--fo); display: block; line-height: 1.2; }
+.kartya img[src*="chiavari-szek-berles-"][src*="-fem"], .kartya img[src*="korasztal-berles-"] { object-fit: contain; background: #fff; }
