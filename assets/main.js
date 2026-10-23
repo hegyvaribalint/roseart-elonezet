@@ -102,7 +102,7 @@
   // Ajánlatkérő űrlap: időcsapda, téma az oldal alapján, AJAX-beküldés, köszönőoldal a témához
   var t0 = Date.now();
   var p = location.pathname;
-  var tema = /chiavari|berles/.test(p) ? 'chiavari' : /meghivo/.test(p) ? 'meghivo' : /mindenem/.test(p) ? 'helyszin'
+  var tema = /chiavari|berles/.test(p) ? 'chiavari' : /meghivo/.test(p) ? 'meghivo' 
     : /rendezvenyszervezes/.test(p) ? 'szervezes' : 'dekoracio';
   var KOSZONJUK = { chiavari: '/chiavari-szek-berles-erdeklodes/', meghivo: '/meghivo-erdeklodes/' };
   document.querySelectorAll('form.urlap').forEach(function (f) {
